@@ -10,7 +10,7 @@ elif answer1 == "B":
 elif answer1 == "C":
     Normal_points += 1
 
-answer2 = input("Is your favorite thing A energy drinks, B listening to music, or C or working?   ")
+answer2 = input("Is your favorite thing A energy drinks and gym, B listening to music, or C or working?   ")
 if answer2 == "A":
     Athlete_points += 0
 elif answer2 == "B":
