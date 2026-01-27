@@ -2,7 +2,7 @@ Athlete_points = 0
 Dancer_points = 0
 Normal_points = 0
 
-answer1 = input("Do you prefer A Playing sports, B dancing, or C sleeping?   ")
+answer1 = input("Do you prefer A playing sports, B dancing, or C sleeping? ")
 if answer1 == "A":
     Athlete_points += 1
 elif answer1 == "B":
@@ -10,22 +10,21 @@ elif answer1 == "B":
 elif answer1 == "C":
     Normal_points += 1
 
-answer2 = input("Is your favorite thing A energy drinks and gym, B listening to music, or C or working?   ")
+answer2 = input("Is your favorite thing A energy drinks and gym, B listening to music, or C working? ")
 if answer2 == "A":
-    Athlete_points += 0
+    Athlete_points += 1
 elif answer2 == "B":
     Dancer_points += 1
 elif answer2 == "C":
-    Normal_points += 0
+    Normal_points += 1
 
-answer3 = input("Would you rather A workout, B sing, or C swim?   ")
+answer3 = input("Would you rather A workout, B sing, or C swim? ")
 if answer3 == "A" or answer3 == "B":
     Athlete_points += 1
 elif answer3 == "C":
-    Dancer_points += 0
-    Dancer_points += 0
+    Dancer_points += 1
 
-answer4 = input("What do you enjoy more? A team competitions, B performing on stage, or C relaxing at home?   ")
+answer4 = input("What do you enjoy more? A team competitions, B performing on stage, or C relaxing at home? ")
 if answer4 == "A":
     Athlete_points += 1
 elif answer4 == "B":
@@ -33,8 +32,7 @@ elif answer4 == "B":
 elif answer4 == "C":
     Normal_points += 1
 
-
-answer5 = input("Which sounds most fun? A running drills, B learning choreography, or C watching shows?   ")
+answer5 = input("Which sounds most fun? A running drills, B learning choreography, or C watching shows? ")
 if answer5 == "A":
     Athlete_points += 1
 elif answer5 == "B":
@@ -42,8 +40,7 @@ elif answer5 == "B":
 elif answer5 == "C":
     Normal_points += 1
 
-
-answer6 = input("Pick an activity: A lifting weights, B freestyle dancing, or C hanging out with friends?   ")
+answer6 = input("Pick an activity: A lifting weights, B freestyle dancing, or C hanging out with friends? ")
 if answer6 == "A":
     Athlete_points += 1
 elif answer6 == "B":
@@ -51,13 +48,20 @@ elif answer6 == "B":
 elif answer6 == "C":
     Normal_points += 1
 
-
-answer7 = input("Your ideal weekend is: A training or practice, B music and movement, or C resting and gaming?   ")
+answer7 = input("Your ideal weekend is: A training, B music and movement, or C resting and gaming? ")
 if answer7 == "A":
     Athlete_points += 1
 elif answer7 == "B":
     Dancer_points += 1
 elif answer7 == "C":
     Normal_points += 1
-print(f"Your score is {Athlete_points} Athlete, {Dancer_points} Dancer, and {Normal_points} Normal")
 
+print(f"Scores → Athlete: {Athlete_points}, Dancer: {Dancer_points}, Normal: {Normal_points}")
+
+# Ending message using AND
+if Athlete_points > Dancer_points and Athlete_points > Normal_points:
+    print("You are an Athlete!")
+elif Dancer_points > Athlete_points and Dancer_points > Normal_points:
+    print("You are a Dancer!")
+else:
+    print("You are Normal / Chill!")
